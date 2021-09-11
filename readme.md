@@ -1,6 +1,6 @@
 # Node Random Color Generator
 
-Create an application that will return a random color in the command line.
+- [ ] Create an application that will return a random color in the command line.
 
 It should work like this:
 
