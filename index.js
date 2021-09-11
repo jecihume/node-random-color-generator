@@ -1,13 +1,23 @@
-const randomColor = require('randomcolor'); /*var that's calling a library, this var is a function*/
-const createColor = require('my-colors'); /*var that's calling a library that's coloring strings in the console*/
+// var that's calling a library, this var is a function
+const randomColor = require('randomcolor');
 
+// var that's calling a library that's coloring strings in the console
+const createColor = require('my-colors');
+
+// require always gets a package from node_modules (unless something else is specified)
+const util = require('./utils');
+
+// this var is calling the function which returns a random color in hex(string representing a color)
 const color = randomColor({
   luminosity: 'random',
-  hue: 'random'
-}) /*this var is calling the function which returns a random color in hex(string representing a color)*/
+  hue: 'random',
+});
 
-const colorInLines = createColor(color); /*createColor is a function htat needs a color and returns a function that colors the string | everythign i call with this function, will calla color that is colored from line 1 via line 4 */
+// createColor is a function that needs a color and returns a function that colors the string | everything I call with this function, will call a color that is colored from line 2 via line 11
+const colorInLines = createColor(color);
 
+// colorInLines = function that's returned
+// color = only if I write 'color' will it output the actual color it describes
 const endResult = colorInLines(`################################
 ################################
 ################################
@@ -16,17 +26,17 @@ const endResult = colorInLines(`################################
 #####                      #####
 ################################
 ################################
-################################`) /* colorInLines = function that's returned; color = only if I write 'color' will it output the actual color it describes*/
+################################`);
 
-/*if(process.argv[2]){
-  console.log(endResult);
-}*/
-const userInput = process.argv[2];
-console.log(userInput);
+console.log(endResult);
 
+// It should be able to not only accept the command itself, but also the request for:
+// hue (e.g. green or red or blue)
+// luminosity (e.g. light or dark)
+// ...and then generate random colors that match those choices.
+// What could be the next steps?!
 
-//console.log(endResult);
-
-/*
-What could be the next steps?!
-*/
+// if(process.argv[2]){}
+// const userInput = process.argv[2];
+// console.log(userInput);
+// console.log(endResult);
