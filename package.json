@@ -6,9 +6,7 @@
   "author": "JeciHume <jecihume@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "i": "^0.3.6",
     "my-colors": "^1.0.0",
-    "npm": "^7.22.0",
     "randomcolor": "^0.6.2",
     "react": "^17.0.2"
   },
