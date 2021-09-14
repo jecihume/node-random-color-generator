@@ -36,7 +36,7 @@ if (
   console.log('You asked for luminosity, so... I added a color!');
 } else {
   userChoiceHue = process.argv[2];
-  console.log('This ain`t no luminosity, but it`s' + ' ' + userChoiceHue + '!');
+  console.log('This ain`t no luminosity, but it`s ' + userChoiceHue + '!');
 }
 const userChoice = {
   luminosity: userChoiceLuminosity,
