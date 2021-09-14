@@ -1,20 +1,20 @@
-// var that's calling a library, this var is a function
+// require gets a package from node_modules (unless something else is specified), for example:
+// const utils = require('./utils');
+
+// variable (that's a function) that's calling a library to assign a random color
 const randomColor = require('randomcolor');
 
-// var that's calling a library that's coloring strings in the console
+// variable that's calling a library that's coloring strings in the console
 const createColor = require('my-colors');
 
-// require always gets a package from node_modules (unless something else is specified)
-const util = require('./utils');
-
-// this var is calling the function which returns a random color in hex(string representing a color)
-const color = randomColor({
-  luminosity: 'random',
-  hue: 'random',
+// this variable is calling the function which returns a random color in hex (=string representing a color)
+const askForColor = randomColor({
+  luminosity: process.argv[2],
+  hue: process.argv[3],
 });
 
 // createColor is a function that needs a color and returns a function that colors the string | everything I call with this function, will call a color that is colored from line 2 via line 11
-const colorInLines = createColor(color);
+const colorInLines = createColor(askForColor);
 
 // colorInLines = function that's returned
 // color = only if I write 'color' will it output the actual color it describes
@@ -22,7 +22,7 @@ const endResult = colorInLines(`################################
 ################################
 ################################
 #####                      #####
-#####        ${color}       #####
+#####        ${askForColor}       #####
 #####                      #####
 ################################
 ################################
