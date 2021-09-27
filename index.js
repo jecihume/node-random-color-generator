@@ -42,12 +42,12 @@ const userChoice = {
   luminosity: userChoiceLuminosity,
   hue: userChoiceHue,
 };
-const askForColor = randomColor(userChoice);
+const customColor = randomColor(userChoice);
 
 // if (askForColor === userChoiceLuminosity + userChoiceHue)
 
 // createColor is a function that needs a color and returns a function that colors the string | everything I call with this function, will call a color that is colored from line 2 via line 11
-const colorInLines = createColor(askForColor);
+const colorInLines = createColor(customColor);
 
 // colorInLines = function that's returned
 // color = only if I write 'color' will it output the actual color it describes
@@ -55,7 +55,7 @@ const endResult = colorInLines(`################################
 ################################
 ################################
 #####                      #####
-#####        ${askForColor}       #####
+#####        ${customColor}       #####
 #####                      #####
 ################################
 ################################
