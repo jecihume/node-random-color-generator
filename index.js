@@ -2,7 +2,7 @@
 // const utils = require('./utils');
 
 // variable (that's a function) that's calling a library to assign a random color
-const randomColor = require('randomcolor');
+const randomColor = require('randomcolor'); // import the script
 
 // variable that's calling a library that's coloring strings in the console
 const createColor = require('my-colors');
@@ -15,7 +15,7 @@ const createColor = require('my-colors');
 // });
 
 // Variant 2
-// Refactoring of my code: changing my code around without changing what it's going! = Make it Tchibo!
+// Refactoring of my code: changing my code around without changing what it's doing! = Make it Tchibo!
 // Golden Rule of Refactoring: Straight after refactoring: run code again to see if it still works!
 // const userChoice = {
 //   luminosity: process.argv[2],
@@ -25,17 +25,17 @@ const createColor = require('my-colors');
 
 // Variant 3
 // another refactoring:
-const userChoiceLuminosity = process.argv[2];
-let userChoiceHue = process.argv[3];
+// const color = randomColor();
+const userChoiceLuminosity = process.argv[3];
+const userChoiceHue = process.argv[2];
 // console.log('You asked for luminosity...' + userChoiceLuminosity);
 if (
   userChoiceLuminosity === 'bright' ||
   userChoiceLuminosity === 'light' ||
   userChoiceLuminosity === 'dark'
 ) {
-  console.log('You asked for luminosity, so... I added a color!');
+  console.log('You asked for luminosity, so... I added a color');
 } else {
-  userChoiceHue = process.argv[2];
   console.log('This ain`t no luminosity, but it`s ' + userChoiceHue + '!');
 }
 const userChoice = {
